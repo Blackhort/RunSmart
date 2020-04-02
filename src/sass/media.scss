@@ -1,3 +1,97 @@
 @media (max-width: 565px){
+.header{
+    flex-direction: column;
+    &__official{
+        padding-top: 25px;
+        span{
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    }
+    &__contacts{
+        display: none;
+    }
+}
+.promo{
+    padding: 25px 0 60px 0;
+    &__content{
+        align-items: center;
+        padding-top: 80px;
+    }
+    &__title{
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+    }
+    &__subtitle{
+        font-size: 20px;
+        padding-top: 20px;
+        line-height: 30px;
+        text-align: center;
+    }
+    &__wrapper{
+        flex-direction: column;
+        padding-top: 25px;
+    }
+    &__inner{
+        padding: 15px 0;
 
+    }
+    .button_max{
+        max-width: 320px;
+        width: 100%;
+    }
+}
+.title{
+    font-size: 22px;
+}
+.advantage{
+    padding: 50px 0 58px 0;
+    &__wrapper{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 35px;
+    }
+    &__inner{
+        padding: 15px 0;
+        max-width: 360px;
+        width: 100%;
+    }
+}
+}
+@media (max-width: 767px){
+.header{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    &__contacts{
+        display: none;
+    }
+}
+.promo{
+    &__content{
+        align-items: center;
+    }
+    &__title{
+        font-size: 36px;
+    }
+    &__subtitle{
+        font-size: 22px;
+    }
+}
+.title{
+    font-size: 25px;
+}
+.advantage{
+    padding: 50px 0 58px 0;
+    &__wrapper{
+        padding-top: 40px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    &__inner{
+        padding: 15px 0;
+        min-width: 45%;
+    }
+    
+}
 }
