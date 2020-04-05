@@ -1,29 +1,16 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+const slider = tns({
+  container: '.carusel__slider',
+  items: 1,
+  slideBy: 'page',
+  autoplay: false,
+  controls: false,
+  nav: false,
+});
 
-function plusSlide() {
-  showSlides(slideIndex += 1);
-}
+document.querySelector('.carusel__prev').addEventListener('click', function () {
+  slider.goTo('prev')
+});
 
-function minusSlide() {
-  showSlides(slideIndex -= 1);  
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  const slides = document.getElementsByClassName("carusel__item");
-  if (n > slides.length) {
-  slideIndex = 1
-  }
-  if (n < 1) {
-  slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-  slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
-}
+document.querySelector('.carusel__next').addEventListener('click', function () {
+  slider.goTo('next')
+});

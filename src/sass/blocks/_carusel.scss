@@ -2,58 +2,28 @@
     min-height: 743px;
     padding: 81px 0 82px 0;
     &__slider{
-        position: relative;
-        height: 580px;
         display: flex;
         align-items: center;
-        justify-content: center;
     }
     &__img{
+        margin: 0 auto;
         display: block;
-        width: 100%;
+        max-width: 85%;
     }
     &__prev, &__next{
         cursor: pointer;
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
         width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: $main-color;
-        font-weight: bold;
-        font-size: 36px;
         transition: 0.6s ease;
-        &:hover{
-            background-color: rgba(25, 24, 24, 0.3);
-        }
+        border: none;
     }
     &__prev{
-        left: 0;
-        border-radius: 6px 0 0 6px;
+        left: 15px;
     }
     &__next{
-        right: 0;
-        border-radius: 0 6px 6px 0;
+        right: 15px;
     }
-    &__item {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-      @-webkit-keyframes fade {
-        from {
-        opacity: .4
-        }
-        to { opacity: 1
-        }
-      }
-      @keyframes fade {
-        from {
-        opacity: .4
-        }
-        to {
-        opacity: 1
-        }
-    }  
 }
