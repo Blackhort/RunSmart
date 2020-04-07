@@ -26,4 +26,18 @@
     &__next{
         right: 15px;
     }
+    .tns-nav{
+        text-align: center;
+        button{
+            margin: 0 10px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 100%;
+            outline: none;
+        }
+        &-active{
+            background-color: $main-color;
+        }
+    }
 }

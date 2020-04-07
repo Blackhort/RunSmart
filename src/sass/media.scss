@@ -59,6 +59,16 @@
             margin: 0 auto;
         }
     }
+    .carusel{
+        min-height: 500px;
+        padding: 50px 0 50px 0;
+        &__next, &__prev{
+            display: none;
+        }
+        &__img{
+            max-width: 90%;
+        }
+    }
 }
 @media (max-width: 565px){
     .header{
@@ -120,6 +130,13 @@
         }
         &__descr{
             font-size: 14px;
+        }
+    }
+    .carusel{
+        min-height: 200px;
+        padding: 30px 0 30px 0;
+        &__img{
+            max-width: 100%;
         }
     }
 }

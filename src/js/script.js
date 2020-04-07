@@ -4,7 +4,17 @@ const slider = tns({
   slideBy: 'page',
   autoplay: false,
   controls: false,
-  nav: false,
+  navPosition: "bottom",
+  nav: true,
+  autoplay: true,
+  autoplayButton: false,
+  autoplayButtonOutput: false,
+  responsive: {
+    768: {
+      nav: false,
+      autoplay: false,
+    }
+  }
 });
 
 document.querySelector('.carusel__prev').addEventListener('click', function () {
