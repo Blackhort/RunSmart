@@ -1,0 +1,162 @@
+.catalog{
+    padding-bottom: 103px;
+    &__tabs{
+        margin-top: 69px;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+    &__tab{
+        transform: skewX(-25deg);
+        width: 220px;
+        height: 50px;
+        margin: 0 5px;
+        border: solid 2px #d0d0d0;
+        text-align: center;
+        line-height: 48px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #6b6b6b;
+        text-transform: uppercase;
+        cursor: pointer;
+        div{
+            transform: skewX(25deg);
+        }
+        &:hover{
+            box-shadow: 0px 0px 7px $main-color;
+            border: none;
+        }
+        &_active{
+            background-color: $main-color;
+            color: #fff;
+            border:  none;
+            &:hover{
+                box-shadow: none;
+            }
+        }
+    }
+    &__content{
+        margin-top: 59px;
+        display: none;
+        &_active{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+    &-item{
+        padding: 20px 20px 26px 20px;
+        margin-bottom: 20px;
+        width: 300px;
+        min-height: 440px;
+        border: solid 2px #e8e8e8;
+        overflow: hidden;
+        &__img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+        &__subtitle{
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            color: #0d0d0d;
+        }
+        &__descr{
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+            color: #0d0d0d;
+        }
+        &__link{
+            display: block;
+            margin-top: 17px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            color: $main-color;
+        }
+        hr{
+            margin: 19px 0 21px 0;
+            border-bottom: none;
+            background-color: #e8e8e8;
+        }
+        &__footer{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__old-price{
+            font-size: 14px;
+            font-weight: 300;
+            text-align: left;
+            color: #555555;
+            text-decoration: line-through;
+        }
+        &__price{
+            font-size: 20px;
+            font-weight: 700;
+            text-align: left;
+            color: #050505;
+        }
+        &__wrapper{
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content{
+            width: 50%;
+            margin-right: 0;
+            transform: translateX(-100%);
+            transition: 0.5s all;
+            &_active{
+                transform: translateX(0);
+                margin-right: 20px;
+            }
+        }
+        &__more{
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0);
+            padding-right: 20px;
+            transition: 0.5s all;
+            &_active{
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+        }
+        &__list{
+            position: relative;
+            list-style-type: none;
+            padding-left: 19px;
+            li{
+                position: relative;
+                font-size: 14px;
+                font-weight: 300;
+                color: #555555;
+                margin-bottom: 20px;
+                &::before{
+                    content: ' ';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 5px
+                }
+            }
+        }
+        &__back{
+            display: block;
+            position: absolute;
+            font-size: 14px;
+            font-weight: 500;
+            color: $main-color;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 19px));
+            text-transform: uppercase;
+        }
+    }
+}
