@@ -36,3 +36,15 @@ document.querySelector('.carusel__next').addEventListener('click', function () {
     
   });
   })(jQuery);
+
+  function toggleSlide(item){
+    $(item).each(function(i){
+      $(this).on('click', function(e){
+        e.preventDefault();
+        $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+        $('.catalog-item__more').eq(i).toggleClass('catalog-item__more_active');
+      })
+    })
+  }
+  toggleSlide('.catalog-item__link');
+  toggleSlide('.catalog-item__back');
