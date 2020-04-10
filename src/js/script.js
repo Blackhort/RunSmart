@@ -6,7 +6,7 @@ const slider = tns({
   controls: false,
   navPosition: "bottom",
   nav: true,
-  autoplay: true,
+  autoplay: false,
   autoplayButton: false,
   autoplayButtonOutput: false,
   responsive: {

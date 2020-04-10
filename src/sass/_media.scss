@@ -139,4 +139,22 @@
             max-width: 100%;
         }
     }
+    .catalog{
+        &__tab{
+            width: auto;
+            max-width: 140px;
+            height: 40px;
+            padding: 0 7px;
+            margin: 0px 2px;
+            border: solid 1px #d0d0d0;
+            line-height: 38px;
+            font-size: 11px;
+        }
+        &__content{
+            &_active{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
 }
