@@ -5,6 +5,26 @@
             font-size: 31px;
         }
     }
+    .catalog{
+        &__tab{
+            width: 170px;
+            height: 40px;
+            padding: 0 7px;
+            margin: 0px 2px;
+            border: solid 1px #d0d0d0;
+            line-height: 38px;
+            font-size: 16px;
+        }
+        &__content{
+            &_active{
+                display: flex;
+                justify-content: flex-start;
+            }
+        }
+        &-item{
+            margin: 0 auto 20px auto;
+        }
+    }
 }
 @media (max-width: 767px){
     .header{
@@ -67,6 +87,11 @@
         }
         &__img{
             max-width: 90%;
+        }
+    }
+    .catalog{
+        &__tab{
+            font-size: 14px;
         }
     }
 }
@@ -144,15 +169,10 @@
             width: auto;
             max-width: 140px;
             height: 40px;
-            padding: 0 7px;
-            margin: 0px 2px;
-            border: solid 1px #d0d0d0;
-            line-height: 38px;
             font-size: 11px;
         }
         &__content{
             &_active{
-                display: flex;
                 justify-content: center;
             }
         }
