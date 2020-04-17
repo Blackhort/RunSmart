@@ -14,4 +14,22 @@
         font-weight: 500;
         color: #ffffff;
     }
+    input.error{
+        background-color: rgb(255, 143, 143);
+        color: #ffffff !important;
+    }
+    input.error:focus{
+        border: 2px solid $main-color;
+        background-color: #ffffff;
+        color: #4b4b4b !important;
+        outline: none;
+    }
+    label.error{
+        position: relative;
+        left: 310px;
+        top: -36px;
+        text-align: left;
+        font-size: 13px;
+        color: #ffffff
+    }
 }

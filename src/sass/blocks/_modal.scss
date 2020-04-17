@@ -16,6 +16,7 @@
     min-height: 400px;
     padding: 38px 40px 40px 40px;
     border-radius: 8px;
+
     &__close{
         position: absolute;
         font-size: 41px;
@@ -40,6 +41,16 @@
     }
     &_mini{
         min-height: 140px;
+    }
+    input.error{
+        border: 1px solid $main-color;
+        color: $main-color;
+    }
+    label.error{
+        margin-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        color: $main-color
     }
 }
 

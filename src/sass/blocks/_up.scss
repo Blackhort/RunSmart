@@ -1,0 +1,19 @@
+.up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: block;
+    text-align: center;
+    line-height: 38px;
+    font-size: 20px;
+    width: 0; 
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid rgba($color: $main-color, $alpha: 0.6);
+    transition: 0.6s border-left, 0.6s border-right, 0.6s border-bottom;
+    &:hover{
+        border-bottom: 60px solid rgba($color: $main-color, $alpha: 0.8); 
+    }
+}
+
