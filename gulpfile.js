@@ -28,7 +28,7 @@ gulp.task('styles', function(){
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/css"))
-        .pipe(browserSync.stream());
+        .on('end', browserSync.reload);
 });
 
 gulp.task('watch', function(){
@@ -41,13 +41,13 @@ gulp.task('html', function() {
     return gulp.src("src/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist/'))
-        .pipe(browserSync.stream());
+        .on('end', browserSync.reload);
 });
 
 gulp.task('scripts', function() {
     return gulp.src("src/js/**/*.js")
         .pipe(gulp.dest('dist/js'))
-        .pipe(browserSync.stream());
+        .on('end', browserSync.reload);
 });
 
 gulp.task('fonts', function() {
