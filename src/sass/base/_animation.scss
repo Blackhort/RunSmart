@@ -1,0 +1,36 @@
+@keyframes heartbeat{
+    form{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2); 
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes cupbeat{
+    form{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(-25deg);
+    }
+    66%{
+        transform: rotate(25deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+@keyframes shoebeat{
+    form{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}

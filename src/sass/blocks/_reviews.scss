@@ -5,13 +5,30 @@
         margin-bottom: 20px;
     }
     hr{
-        border-top-color: #f6f6f6;
-        border-bottom: none;
+        display: none;
     }
     &-box{
+        position: relative;
         display: flex;
         align-items: flex-start;
         padding: 50px 0 50px 0;
+        &:last-child{
+            &::after{
+                content: '';
+                display: none;
+            }
+
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: #f6f6f6;
+            bottom: 0;
+            
+        }
         &__inner{
             max-width: 718px;
             padding-left: 62px;
