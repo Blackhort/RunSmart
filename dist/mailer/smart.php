@@ -4,21 +4,27 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
 
-require_once('phpmailer/PHPMailerAutoload.php');
-$mail = new PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+require 'src/Exception.php';
+require 'src/PHPMailer.php';
+require 'src/SMTP.php';
+
+$mail = new PHPMailer();
 $mail->CharSet = 'utf-8';
 
-//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+//$mail->SMTPDebug = 1;                               // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'lord.blackhort@gmail.com';                 // Наш логин
+$mail->Username = 'blackhort';                 // Наш логин
 $mail->Password = 'Pheonix335359';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465 ;                                    // TCP port to connect to
  
-$mail->setFrom('lord.blackhort@gmail.com', 'Pulse');   // От кого письмо 
+$mail->setFrom('blackhort@yandex.ru', 'Pulse');   // От кого письмо 
 $mail->addAddress('darkphenix@bk.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
@@ -35,10 +41,10 @@ $mail->Body    = '
 	Номер телефона: ' . $phone . '<br>
 	E-mail: ' . $email . '';
 
-if(!$mail->send()) {
-    return false;
+if($mail->send()) {
+	echo 'Отправлено!';
 } else {
-    return true;
+    echo 'Не отправлено!' . $mail->ErrorInfo;;
 }
 
 ?>
