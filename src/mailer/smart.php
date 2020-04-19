@@ -1,17 +1,14 @@
 <?php 
 
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require 'src/Exception.php';
 require 'src/PHPMailer.php';
 require 'src/SMTP.php';
 
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
 
 $mail = new PHPMailer;
 //$mail->CharSet = 'utf-8';
@@ -21,10 +18,11 @@ $mail->SMTPDebug = SMTP::DEBUG_SERVER;                                // Enable 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Port = 465;                                    // TCP port to connect to
 $mail->Username = 'darkphenix@bk.ru';                 // Наш логин
 $mail->Password = 'Pheonix335359';                           // Наш пароль от ящика
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 465;                                    // TCP port to connect to
+//$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;                            // Enable TLS encryption, `ssl` also accepted
+
  
 $mail->setFrom('darkphenix@bk.ru', 'Pulse');   // От кого письмо 
 $mail->addAddress('blackhort@yandex.ru');     // Add a recipient

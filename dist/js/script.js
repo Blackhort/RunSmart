@@ -105,12 +105,11 @@ document.querySelector('.carusel__next').addEventListener('click', function () {
     }
   });
 
-
   $('form').submit(function(e) {
     e.preventDefault();
     $.ajax({
       type: "POST",
-      url: "mailer/smart.php",
+      url: "mailer/smart1.php",
       data: $(this).serialize()
     }).done(function() {
         $(this).find("input").val("");
@@ -120,6 +119,9 @@ document.querySelector('.carusel__next').addEventListener('click', function () {
     });
       return false;
   });
+
 })(jQuery);
+
+
 
 new WOW().init();
