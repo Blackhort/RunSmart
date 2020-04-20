@@ -120,8 +120,8 @@ document.querySelector('.carusel__next').addEventListener('click', function () {
       return false;
   });
 
+  new WOW().init();
+
 })(jQuery);
 
 
-
-new WOW().init();
